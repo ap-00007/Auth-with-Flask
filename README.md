@@ -1,38 +1,46 @@
-# Flask Authentication System 🔐
+# 🔐 Flask Authentication System
 
-A simple authentication system built with Flask that allows users to register, log in, securely store passwords, and download protected files.
-This project demonstrates secure authentication practices using Flask, SQLAlchemy, and Flask-Login.
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Flask](https://img.shields.io/badge/Flask-Web_Framework-black)
+![Database](https://img.shields.io/badge/Database-SQLite-green)
+![Security](https://img.shields.io/badge/Security-Password_Hashing-orange)
 
----
-
-## Features
-
-* User registration
-* Secure password hashing with `pbkdf2:sha256`
-* Login and logout functionality
-* Session management using Flask-Login
-* Protected routes accessible only to authenticated users
-* Secure file download for logged-in users
-* SQLite database for storing user data
+A secure user authentication system built using **Flask**, **SQLAlchemy**, and **Flask-Login**.
+This project demonstrates how to implement **secure login, password hashing, protected routes, and session management** in a Flask web application.
 
 ---
 
-## Tech Stack
+# 🚀 Features
 
-* Python
-* Flask
-* Flask-Login
-* Flask-SQLAlchemy
-* SQLite
-* Werkzeug Security
-* Jinja2 Templates
+* User Registration
+* Secure Password Hashing (`pbkdf2:sha256`)
+* User Login & Logout
+* Session Management with **Flask-Login**
+* Protected Routes using `@login_required`
+* Secure File Download
+* SQLite Database Integration
+* Flash Messages for Authentication Feedback
 
 ---
 
-## Project Structure
+# 🛠 Tech Stack
+
+| Technology        | Purpose                             |
+| ----------------- | ----------------------------------- |
+| Python            | Programming Language                |
+| Flask             | Web Framework                       |
+| Flask-Login       | Authentication & Session Management |
+| Flask-SQLAlchemy  | Database ORM                        |
+| SQLite            | Lightweight Database                |
+| Werkzeug Security | Password Hashing                    |
+| Jinja2            | Template Engine                     |
+
+---
+
+# 📂 Project Structure
 
 ```
-project/
+Flask-Authentication/
 │
 ├── app.py
 ├── users.db
@@ -53,52 +61,52 @@ project/
 
 ---
 
-## Installation
+# ⚙️ Installation
 
 Clone the repository
 
-```bash
+```
 git clone https://github.com/ap-00007/Auth-with-Flask.git
 cd flask-authentication-system
 ```
 
 Create a virtual environment
 
-```bash
+```
 python -m venv venv
 ```
 
-Activate the environment
+Activate it
 
-Mac/Linux:
+Mac / Linux
 
-```bash
+```
 source venv/bin/activate
 ```
 
-Windows:
+Windows
 
-```bash
+```
 venv\Scripts\activate
 ```
 
 Install dependencies
 
-```bash
+```
 pip install flask flask_sqlalchemy flask_login werkzeug
 ```
 
 ---
 
-## Running the Application
+# ▶️ Run the Application
 
-Start the Flask server:
+Start the server:
 
-```bash
+```
 python app.py
 ```
 
-Open your browser and go to:
+Open your browser:
 
 ```
 http://127.0.0.1:5000
@@ -106,56 +114,84 @@ http://127.0.0.1:5000
 
 ---
 
-## Authentication Flow
+# 🔑 Authentication Flow
 
-1. User registers with email, name, and password.
-2. Password is hashed and salted using `pbkdf2:sha256`.
-3. User is automatically logged in after registration.
-4. Protected routes (`/secrets` and `/download`) require authentication.
-5. Flask-Login manages user sessions.
-6. Logged-in users can download protected files.
-
----
-
-## Security Features
-
-* Password hashing with salt
-* Unique email constraint in database
-* Session-based authentication
-* Protected routes using `@login_required`
-* Secure file serving using `send_from_directory()`
+1. User registers with **email, name, and password**
+2. Password is **hashed and salted** using `pbkdf2:sha256`
+3. User is automatically logged in after registration
+4. Flask-Login manages user sessions
+5. Protected routes require authentication
+6. Authenticated users can download protected resources
 
 ---
 
-## Example Routes
+# 🔒 Security Implemented
+
+* Password hashing with **salt**
+* Secure password verification with `check_password_hash`
+* Unique email constraint
+* Session based authentication
+* Protected routes
+* Safe file serving
+
+---
+
+# 📌 Available Routes
 
 | Route       | Description             |
 | ----------- | ----------------------- |
 | `/`         | Home page               |
-| `/register` | User registration       |
-| `/login`    | User login              |
-| `/logout`   | Log out current user    |
+| `/register` | Register new user       |
+| `/login`    | Login page              |
+| `/logout`   | Logout user             |
 | `/secrets`  | Protected page          |
 | `/download` | Download protected file |
 
 ---
 
-## Future Improvements
+# 📸 Screenshots (Optional)
 
-* Email verification
-* Password reset functionality
-* OAuth login (Google/GitHub)
-* User profile dashboard
-* Better UI styling
+You can add screenshots like this:
+
+```
+screenshots/
+    login.png
+    register.png
+    secrets.png
+```
+
+Example:
+
+```
+![Login Page](screenshots/login.png)
+```
 
 ---
 
-## Author
+# 📈 Possible Improvements
+
+* Email verification
+* Password reset functionality
+* OAuth login (Google / GitHub)
+* Rate limiting for login attempts
+* CSRF protection
+* Docker deployment
+* PostgreSQL database support
+
+---
+
+# 👨‍💻 Author
 
 Ashish Panda
 
 ---
 
-## License
+# ⭐ Contributing
 
-This project is for educational purposes.
+Pull requests are welcome. For major changes, please open an issue first.
+
+---
+
+# 📄 License
+
+This project is open-source and available under the **MIT License**.
