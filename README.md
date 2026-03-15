@@ -149,24 +149,7 @@ http://127.0.0.1:5000
 
 ---
 
-# 📸 Screenshots (Optional)
 
-You can add screenshots like this:
-
-```
-screenshots/
-    login.png
-    register.png
-    secrets.png
-```
-
-Example:
-
-```
-![Login Page](screenshots/login.png)
-```
-
----
 
 # 📈 Possible Improvements
 
@@ -186,12 +169,3 @@ Ashish Panda
 
 ---
 
-# ⭐ Contributing
-
-Pull requests are welcome. For major changes, please open an issue first.
-
----
-
-# 📄 License
-
-This project is open-source and available under the **MIT License**.
